@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class VipController extends AbstractController
 {
-    #[Route('/', name: 'app_vip')]
+    #[Route('/vip', name: 'app_vip')]
     public function index(): Response
     {
         return $this->render('vip/index.html.twig', [
