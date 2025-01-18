@@ -1,0 +1,23 @@
+<nav class="mb-2-5">
+  <ul>
+    <li><strong><a href={{ path('app_home') }} class="no-decoration blue-400">Share Promo Coade</a></strong></li>
+  </ul>
+  <ul>
+    <li><a href={{ path('app_vip') }} class="secondary">VIP</a></li>
+    <li>
+      <details class="dropdown">
+        <summary>
+          Compte
+        </summary>
+        <ul dir="rtl">
+          {% if not is_granted('IS_AUTHENTICATED') %}
+            <li><a href={{ path('app_login') }}>Se connecter</a></li>
+          {% endif %}
+          {% if is_granted('IS_AUTHENTICATED') %}
+            <li><a href={{ path('app_logout') }}>Se déconnecter</a></li>
+          {% endif %}
+        </ul>
+      </details>
+    </li>
+  </ul>
+</nav>

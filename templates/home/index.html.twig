@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+<h1>Bienvenu dans l'application Share Promo Code 🚀</h1>
+
+<div class="flex flex-column items-center justify-content-center font-size-1-25 mx-4">
+    <p>Venez ici pour découvrir les meilleures promos des tops commerce en ligne !</p>
+    <p>Si vous possèdez un compte alors <a href={{ path('app_login') }} alt="aller à la page de connexion">connectez-vous</a> ou <a href={{ path('app_register') }} alt="aller à la page de création de compte">créez vous un compte</a>.</p>
+</div>
+{% endblock %}

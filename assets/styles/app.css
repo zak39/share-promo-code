@@ -1,0 +1,39 @@
+.flex {
+    display: flex;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.mx-4 {
+    margin: 4rem 0 4rem 0;
+}
+
+.mb-2-5 {
+    margin-bottom: 2.5rem;
+}
+
+.mt-8 {
+    margin-top: 8rem;
+}
+
+.font-size-1-25 {
+    font-size: 1.25rem;
+}
+
+.no-decoration {
+    text-decoration: none;
+}
+
+.blue-400 {
+    color: var(--pico-color-blue-200);
+}
