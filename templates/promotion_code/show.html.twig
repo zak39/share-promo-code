@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+<article>
+    <header class="flex items-center justify-between">
+        {{ promotionCode.productName }}
+        <small>id: {{ promotionCode.id }}</small>
+    </header>
+    <div class="flex gap-2">
+        <mark>{{ promotionCode.rate }}%</mark>
+        <kbd>{{ promotionCode.code }}</kbd>
+    </div>
+</article>
+
+<a href={{ path('app_promotion_code_index') }}>Revenir en arrière</a>
+{% endblock %}

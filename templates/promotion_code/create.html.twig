@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PromotionCodeController!{% endblock %}
+
+{% block body %}
+    {{ form_start(form) }}
+        <div>
+            <div>
+                {{ form_label(form.productName) }}
+            </div>
+            <div>
+                {{ form_widget(form.productName) }}
+            </div>
+            <small class="red-600">{{ form_errors(form.productName) }}</small>
+        </div>
+        <div>
+            <div>
+                {{ form_label(form.rate) }}
+            </div>
+            <div>
+                {{ form_widget(form.rate) }}
+            </div>
+            <small class="red-600">{{ form_errors(form.rate) }}</small>
+        </div>
+        <div>
+            <div>
+                {{ form_label(form.code) }}
+            </div>
+            <div>
+                {{ form_widget(form.code) }}
+            </div>
+            <small class="red-600">{{ form_errors(form.code) }}</small>
+        </div>
+        {{ form_row(form.submit) }}
+    {{ form_end(form) }}
+{% endblock %}
