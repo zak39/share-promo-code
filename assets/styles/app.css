@@ -6,8 +6,16 @@
     justify-content: center;
 }
 
+.justify-between {
+    justify-content: space-between;
+}
+
 .flex-column {
     flex-direction: column;
+}
+
+.gap-2 {
+    gap: 2rem;
 }
 
 .items-center {
@@ -16,6 +24,10 @@
 
 .mx-4 {
     margin: 4rem 0 4rem 0;
+}
+
+.my-2-5 {
+    margin: 2.5rem 0 2.5rem 0;
 }
 
 .mb-2-5 {
@@ -35,5 +47,13 @@
 }
 
 .blue-400 {
+    color: var(--pico-color-blue-200);
+}
+
+.zinc-350 {
+    color: var(--pico-color-zinc-350);
+}
+
+.red-600 {
     color: var(--pico-color-blue-200);
 }
