@@ -4,7 +4,7 @@
 
 {% block body %}
 <div>
-    <a href={{ path('app_promotion_code_create') }} class="flex my-2-5 no-decoration"><button>Créer un nouveau code promo</button></a>
+    <a href={{ path('app_promotion_code_create') }} class="inline-block my-2 no-decoration"><button>Créer un nouveau code promo</button></a>
     {% for code in promotionCodes %}
         <a href={{ path('app_promotion_code_show', { id: code.id }) }} class="no-decoration zinc-350">
             <article>
