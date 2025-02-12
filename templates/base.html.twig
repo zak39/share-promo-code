@@ -15,7 +15,9 @@
         {% endblock %}
     </head>
     <body>
-        {{ include('_banner.html.twig') }}
+        {% if app.environment == "production" %}
+            {{ include('_banner.html.twig') }}
+        {% endif %}
         <main class="container">
             {{ include('_navbar.html.twig') }}
             {% block body %}{% endblock %}

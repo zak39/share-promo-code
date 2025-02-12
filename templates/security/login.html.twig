@@ -39,38 +39,40 @@
         </button>
     </form>
 
-    <article class="pico-background-amber-300 pico-color-pumpkin-700">
-        <h4 class="pico-color-pumpkin-700">⚠️ Utilisation et comptes!</h4>
+    {% if app.environment == "production" %}
+        <article class="pico-background-amber-300 pico-color-pumpkin-700">
+            <h4 class="pico-color-pumpkin-700">⚠️ Utilisation et comptes!</h4>
 
-        <p class="pico-color-pumpkin-700">Attention ! Vous pouvez vous connecter et manipuler les données, notamment créer, supprimer ou modifier des éléments. Ces modifications seront visibles par tous les utilisateurs !</p>
+            <p class="pico-color-pumpkin-700">Attention ! Vous pouvez vous connecter et manipuler les données, notamment créer, supprimer ou modifier des éléments. Ces modifications seront visibles par tous les utilisateurs !</p>
 
-        <p class="pico-color-pumpkin-700">Les données sont automatiquement réinitialisées toutes les heures.</p>
+            <p class="pico-color-pumpkin-700">Les données sont automatiquement réinitialisées toutes les heures.</p>
 
-        <hr>
+            <hr>
 
-        <h5 class="pico-color-pumpkin-700">Comptes</h5>
+            <h5 class="pico-color-pumpkin-700">Comptes</h5>
 
-        <p class="pico-color-pumpkin-700">Tous les comptes ci-dessous utilisent le mot de passe <b>password</b>.</p>
+            <p class="pico-color-pumpkin-700">Tous les comptes ci-dessous utilisent le mot de passe <b>password</b>.</p>
 
-        <p class="pico-color-pumpkin-700">Comptes qui sont administrateur :</p>
-        {% for user in users.admin %}
-        <ul class="pico-color-pumpkin-700">
-            <li><b>email</b>: {{user.email}}</li>
-        </ul>
-        {% endfor %}
+            <p class="pico-color-pumpkin-700">Comptes qui sont administrateur :</p>
+            {% for user in users.admin %}
+            <ul class="pico-color-pumpkin-700">
+                <li><b>email</b>: {{user.email}}</li>
+            </ul>
+            {% endfor %}
 
-        <p class="pico-color-pumpkin-700">Comptes qui sont VIP :</p>
-        {% for user in users.vip %}
-        <ul class="pico-color-pumpkin-700">
-            <li><b>email</b>: {{user.email}}</li>
-        </ul>
-        {% endfor %}
+            <p class="pico-color-pumpkin-700">Comptes qui sont VIP :</p>
+            {% for user in users.vip %}
+            <ul class="pico-color-pumpkin-700">
+                <li><b>email</b>: {{user.email}}</li>
+            </ul>
+            {% endfor %}
 
-        <p class="pico-color-pumpkin-700">Comptes qui sont simples utilisateurs :</p>
-        {% for user in users.simple %}
-        <ul class="pico-color-pumpkin-700">
-            <li><b>email</b>: {{user.email}}</li>
-        </ul>
-        {% endfor %}
-    </article>
+            <p class="pico-color-pumpkin-700">Comptes qui sont simples utilisateurs :</p>
+            {% for user in users.simple %}
+            <ul class="pico-color-pumpkin-700">
+                <li><b>email</b>: {{user.email}}</li>
+            </ul>
+            {% endfor %}
+        </article>
+    {% endif %}
 {% endblock %}
